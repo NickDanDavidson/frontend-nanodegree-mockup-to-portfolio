@@ -8,12 +8,14 @@
 }
 
 .modal {
-	width: 80vw;
+	width: 50vw;
 	height: 50vh;
+	color: #777;
+	font-weight: 300;
 	margin: 50px auto 0;
 	border-radius: 5px;
 	background-color: #fff;
-	animation: intoView .75s ease-out;
+	animation: intoView .6s ease-out;
 }
 
 @keyframes intoView {
@@ -39,7 +41,12 @@
 	font-size: 40px;
 	width: 90%;
 	text-align: left;
+	text-transform: lowercase;
 }
+
+/*.modal-header::first-letter {
+	text-transform: capitalize;
+}*/
 
 .close {
 	font-size: 40px;
@@ -55,6 +62,9 @@
 }
 
 @media screen and (max-width: 500px) {
+	.modal {
+		width: 80vw;
+	}
 	.modal-header,
 	.close {
 		font-size: 20px;
