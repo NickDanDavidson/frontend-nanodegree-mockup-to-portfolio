@@ -8,7 +8,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Nick's Portfolio Mockup</title>
 	<link rel="stylesheet" href="css/portfolio.css">
-	<link rel="stylesheet" href="css/modal.css">
 
 </head>
 
@@ -17,7 +16,7 @@
 	<header>
 
 		<div id="logo">
-			<img src="img/udacity.png" alt="Udacity logo">
+			<img src="img/udacity-resized.png" alt="Udacity logo">
 		</div>
 		<div id="title">
 			<h1>NICK DAVIDSON</h1>
@@ -31,7 +30,7 @@
 		<hr>
 
 		<section id="banner">
-			<img src="img/lake-erie-sunset.jpg" alt="Lake Erie Sunset Banner">
+			<img src="img/lake-erie-sunset-resized.jpg" alt="Lake Erie Sunset Banner">
 		</section>
 
 		<section id="projects">
@@ -40,7 +39,7 @@
 
 			<article class="project">
 
-				<img src="img/arcade-game-screenshot.png" alt="Arcade Game Screenshot">
+				<img src="img/arcade-game-screenshot-resized.png" alt="Arcade Game Screenshot">
 				<p>ARCADE GAME CLONE</p>
 				<a href="https://nickdandavidson.github.io/frontend-nanodegree-arcade-game-clone">GitHub Game Page</a>
 
@@ -48,7 +47,7 @@
 
 			<article class="project">
 
-				<img src="img/neighborhood-map-screenshot.png" alt="Neighborhood Map Screenshot">
+				<img src="img/neighborhood-map-screenshot-resized.png" alt="Neighborhood Map Screenshot">
 				<p>NEIGHBORHOOD MAP</p>
 				<a href="https://nickdandavidson.github.io/frontend-nanodegree-neighborhood-map-app">GitHub Map Page</a>
 
@@ -56,7 +55,7 @@
 
 			<article class="project row-end">
 
-				<img src="img/mobile-pagespeed-screenshot.png" alt="Website Optimization Screenshot">
+				<img src="img/mobile-pagespeed-screenshot-resized.png" alt="Website Optimization Screenshot">
 				<p>WEBSITE OPTIMIZATION</p>
 				<a href="https://nickdandavidson.github.io/frontend-nanodegree-website-optimization">GitHub Optimized Page</a>
 
@@ -64,7 +63,7 @@
 
 			<article class="project">
 
-				<img src="img/interactive-resume-screenshot.png" alt="Interactive Resume Screenshot">
+				<img src="img/interactive-resume-screenshot-resized.png" alt="Interactive Resume Screenshot">
 				<p>INTERACTIVE RESUME</p>
 				<a href="https://nickdandavidson.github.io/frontend-nanodegree-interactive-resume">GitHub Resume Page</a>
 
@@ -72,17 +71,9 @@
 
 			<article class="project">
 
-				<img src="img/jasmine-tests-screenshot.png" alt="Feed Reader Testing Screenshot">
+				<img src="img/jasmine-tests-screenshot-resized.png" alt="Feed Reader Testing Screenshot">
 				<p>FEED READER TESTING</p>
 				<a href="https://nickdandavidson.github.io/frontend-nanodegree-feed-reader-testing">GitHub Jasmine Tests Page</a>
-
-			</article>
-
-			<article class="project row-end">
-
-				<img src="http://placekitten.com/g/370/220" alt="Cute kitten for project 3">
-				<p>MY WIKI</p>
-				<a href="#">http://wait-and-see.com</a>
 
 			</article>
 
@@ -95,8 +86,18 @@
 		<p>&copy; Nick Davidson design 2015</p>
 	</footer>
 
+	<script>
+		var loadModalCSS = function() {
+			var link = document.createElement('link'); link.rel = 'stylesheet';
+			link.href = 'css/modal.css';
+			var head = document.getElementsByTagName('head')[0]; head.parentNode.insertBefore(link, head);
+		};
+		var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+		if (raf) raf(loadModalCSS);
+		else window.addEventListener('load', loadModalCSS);
+	</script>
 	<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
-	<script async src="js/portfolio.js"></script>
+	<script async src="js/portfolio.min.js"></script>
 
 </body>
 
