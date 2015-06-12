@@ -30,12 +30,8 @@ var testsHTML = '<div class="modal-info">For this project I was given a feed rea
 				' and was tasked with writing Jasmine tests to ensure the functionality of the app' +
 				' works as anticipated.</div>';
 
-var wikiHTML = '<div class="modal-info">I built a wiki where users can sign in, edit pages,' +
-			   ' and view pages. I utilized Google AppEngine, Datastore, and Python\'s Jinja2' +
-			   ' templating framework.</div>';
-
 var projects = ['ARCADE GAME CLONE', 'NEIGHBORHOOD MAP', 'WEBSITE OPTIMIZATION', 'INTERACTIVE RESUME',
-				'FEED READER TESTING', 'MY WIKI'];
+				'FEED READER TESTING'];
 
 var main = function() {
 	$('.project img').click(function(e) {
@@ -63,9 +59,6 @@ var main = function() {
 		}
 		if (caption === projects[4]) {
 			$('.modal-inside').append(testsHTML);
-		}
-		if (caption === projects[5]) {
-			$('.modal-inside').append(wikiHTML);
 		}
 	});
 
