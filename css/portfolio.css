@@ -24,6 +24,7 @@ body {
 }
 
 header {
+	display: -webkit-flex;
 	display: flex;
 	width: 80%;
 	margin: auto;
@@ -84,7 +85,9 @@ main hr {
 }
 
 #projects {
+	display: -webkit-flex;
 	display: flex;
+	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 	width: 100%;
 	text-align: center;

@@ -15,7 +15,18 @@
 	margin: 50px auto 0;
 	border-radius: 5px;
 	background-color: #fff;
+	-webkit-animation: intoView .6s ease-out;
 	animation: intoView .6s ease-out;
+}
+
+@-webkit-keyframes intoView {
+	0% {
+		transform: translateY(100%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes intoView {
